@@ -4,13 +4,15 @@
   "description": "a TransformStream that decodes msgpack",
   "main": "index.js",
   "dependencies": {
-    "binary-parse-stream": "^1.2.0"
+    "binary-parse-stream": "^1.2.3"
   },
   "devDependencies": {
-    "mocha": "~1.17.1"
+    "mocha": "~1.17.1",
+    "regenerator": "~0.3.9"
   },
   "scripts": {
-    "test": "mocha -R spec --harmony"
+    "test": "mocha -R spec --harmony",
+    "prepublish": "regenerator -r parser.es6.js > parser.es5.js"
   },
   "repository": {
     "type": "git",

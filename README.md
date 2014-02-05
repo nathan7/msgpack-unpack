@@ -10,8 +10,9 @@
 
 ## ES6
 
- msgpack-unpack-stream uses generators, and applying regenerator to it breaks it horribly.
- Stick with using actual `--harmony`.
+ msgpack-unpack-stream uses generators.
+ There's some wrappage going on using [regenerator](https://github.com/facebook/regenerator) to make this all work on ES5.
+ If you're on an ES6 engine, it'll run natively.
 
 ## API
 
