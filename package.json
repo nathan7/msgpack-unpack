@@ -1,6 +1,6 @@
 {
   "name": "msgpack-unpack-stream",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "a TransformStream that decodes msgpack",
   "main": "index.js",
   "dependencies": {
