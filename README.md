@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/nathan7/msgpack-unpack-stream.png?branch=master)](https://travis-ci.org/nathan7/msgpack-unpack-stream)
+
 # msgpack-unpack-stream
 
  a TransformStream that decodes msgpack.
