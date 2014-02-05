@@ -1,7 +1,6 @@
 'use strict';
 module.exports = MsgpackUnpackStream
 var BinaryParseStream = require('binary-parse-stream')
-  , One = BinaryParseStream.One
   , inherits = require('util').inherits
 
 inherits(MsgpackUnpackStream, BinaryParseStream)
@@ -11,7 +10,7 @@ function MsgpackUnpackStream(options) {
 }
 
 MsgpackUnpackStream.prototype._parse = function* parse() {
-  var first = yield One
+  var first = yield -1
 
   // positive fixint
   if (first < 0x80)
@@ -42,7 +41,7 @@ MsgpackUnpackStream.prototype._parse = function* parse() {
 
   // bin 8
   if (first === 0xC4)
-    return yield (yield One)
+    return yield (yield -1)
   // bin 16
   if (first === 0xC5)
     return yield (yield 2).readUInt16BE(0, true)
@@ -62,7 +61,7 @@ MsgpackUnpackStream.prototype._parse = function* parse() {
     return (yield 8).readDoubleBE(0, true)
 
   if (first === 0xCC)
-    return yield One
+    return yield -1
   if (first === 0xCD)
     return (yield 2).readUInt16BE(0, true)
   if (first === 0xCE)
@@ -88,7 +87,7 @@ MsgpackUnpackStream.prototype._parse = function* parse() {
 
   // str 8
   if (first === 0xD9)
-    return (yield (yield One)).toString()
+    return (yield (yield -1)).toString()
   // str 16
   if (first === 0xDA)
     return (yield (yield 2).readUInt16BE(0, true)).toString()

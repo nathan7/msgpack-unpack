@@ -4,7 +4,7 @@
   "description": "a TransformStream that decodes msgpack",
   "main": "index.js",
   "dependencies": {
-    "binary-parse-stream": "~1.1.0"
+    "binary-parse-stream": "^1.2.0"
   },
   "devDependencies": {
     "mocha": "~1.17.1"
