@@ -116,7 +116,7 @@ it('should handle empty array 16s', function() {
 })
 
 it('should handle empty array 32s', function() {
-  assert.deepEqual(parse(0xDC, 0x00, 0x00, 0x00, 0x00), [])
+  assert.deepEqual(parse(0xDD, 0x00, 0x00, 0x00, 0x00), [])
 })
 
 it('should handle empty map 16s', function() {
