@@ -1,6 +1,6 @@
 {
   "name": "msgpack-unpack",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "decodes msgpack",
   "main": "index.js",
   "dependencies": {
