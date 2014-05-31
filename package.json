@@ -4,8 +4,7 @@
   "description": "decodes msgpack",
   "main": "index.js",
   "dependencies": {
-    "binary-parse-fn": "^1.0.0",
-    "regenerator": "^0.4.8"
+    "binary-parse-fn": "^1.0.0"
   },
   "devDependencies": {
     "mocha": "~1.17.1",
