@@ -1,5 +1,6 @@
 'use strict';
 module.exports = parse
+var read = require('binary-types').be
 
 function* parse() {
   var first = yield -1
@@ -36,10 +37,10 @@ function* parse() {
     return yield (yield -1)
   // bin 16
   if (first === 0xC5)
-    return yield (yield 2).readUInt16BE(0, true)
+    return yield (yield* read.u16())
   // bin 32
   if (first === 0xC6)
-    return yield (yield 4).readUInt32BE(0, true)
+    return yield (yield* read.u32())
 
   // ext 8
   // ext 16
@@ -47,17 +48,20 @@ function* parse() {
 
   // float 32
   if (first === 0xCA)
-    return (yield 4).readFloatBE(0, true)
+    return yield* read.f32()
   // float 64
   if (first === 0xCB)
-    return (yield 8).readDoubleBE(0, true)
+    return yield* read.f64()
 
+  // uint 8
   if (first === 0xCC)
-    return yield -1
+    return yield* read.u8()
+  // uint 16
   if (first === 0xCD)
-    return (yield 2).readUInt16BE(0, true)
+    return yield* read.u16()
+  // uint 32
   if (first === 0xCE)
-    return (yield 4).readUInt32BE(0, true)
+    return yield* read.u32()
   // int 64 @ 0xCF intentionally unimplemented
 
   // int 8

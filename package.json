@@ -4,11 +4,12 @@
   "description": "decodes msgpack",
   "main": "index.js",
   "dependencies": {
-    "binary-parse-fn": "^1.0.0"
+    "binary-parse-fn": "^1.0.0",
+    "binary-types": "^1.0.0"
   },
   "devDependencies": {
     "mocha": "~1.17.1",
-    "regenerator": "~0.3.9"
+    "regenerator": "^0.4.8"
   },
   "scripts": {
     "test": "mocha -R spec --harmony",
