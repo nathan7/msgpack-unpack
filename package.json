@@ -1,10 +1,11 @@
 {
-  "name": "msgpack-unpack-stream",
-  "version": "1.1.0",
-  "description": "a TransformStream that decodes msgpack",
+  "name": "msgpack-unpack",
+  "version": "1.0.0",
+  "description": "decodes msgpack",
   "main": "index.js",
   "dependencies": {
-    "binary-parse-stream": "^1.2.3"
+    "binary-parse-fn": "^1.0.0",
+    "regenerator": "^0.4.8"
   },
   "devDependencies": {
     "mocha": "~1.17.1",
@@ -16,18 +17,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/nathan7/msgpack-unpack-stream.git"
+    "url": "git://github.com/nathan7/msgpack-unpack.git"
   },
   "keywords": [
     "msgpack",
     "unpack",
-    "decode",
-    "stream"
+    "decode"
   ],
   "author": "Nathan Zadoks",
-  "license": "MIT",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nathan7/msgpack-unpack-stream/issues"
+    "url": "https://github.com/nathan7/msgpack-unpack/issues"
   },
-  "homepage": "https://github.com/nathan7/msgpack-unpack-stream"
+  "homepage": "https://github.com/nathan7/msgpack-unpack"
 }

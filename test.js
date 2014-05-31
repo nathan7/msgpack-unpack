@@ -1,15 +1,10 @@
 'use strict'; /* global it:true */
 var assert = require('assert')
-  , UnpackStream = require('./')
+  , parse_ = require('./')
 
 function parse(x) {
   if (!(x instanceof Array)) x = [].slice.call(arguments)
-  var stream = new UnpackStream()
-    , err
-  stream.on('error', function(e) { err = e })
-  stream.write(new Buffer(x))
-  if (err) throw err
-  return stream.read()
+  return parse_(x)
 }
 
 // primitive singleton values

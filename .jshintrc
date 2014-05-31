@@ -4,5 +4,6 @@
   "laxcomma": true,
   "node": true,
   "strict": true,
-  "esnext": true
+  "esnext": true,
+  "newcap": false
 }

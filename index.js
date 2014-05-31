@@ -1,12 +1,6 @@
 'use strict';
-module.exports = MsgpackUnpackStream
-var BinaryParseStream = require('binary-parse-stream')
-  , inherits = require('util').inherits
+var BinaryParser = require('binary-parse-fn')
+  , parser = require('./parser')
 
-inherits(MsgpackUnpackStream, BinaryParseStream)
-function MsgpackUnpackStream(options) {
-  if (!(this instanceof MsgpackUnpackStream)) return new MsgpackUnpackStream(options)
-  BinaryParseStream.call(this, options)
-}
-
-MsgpackUnpackStream.prototype._parse = require('./parser')
+exports = module.exports = BinaryParser(parser)
+exports.parser = parser
