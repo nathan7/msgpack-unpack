@@ -1,16 +1,16 @@
-[![Build Status](https://travis-ci.org/nathan7/msgpack-unpack-stream.png?branch=master)](https://travis-ci.org/nathan7/msgpack-unpack-stream)
+[![Build Status](https://travis-ci.org/nathan7/msgpack-unpack.png?branch=master)](https://travis-ci.org/nathan7/msgpack-unpack)
 
-# msgpack-unpack-stream
+# msgpack-unpack
 
- a TransformStream that decodes msgpack.
+ decodes msgpack.
 
 ## Installation
 
-    npm install msgpack-unpack-stream
+    npm install msgpack-unpack
 
 ## ES6
 
- msgpack-unpack-stream uses generators.
+ msgpack-unpack uses generators.
  There's some wrappage going on using [regenerator](https://github.com/facebook/regenerator) to make this all work on ES5.
  If you're on an ES6 engine, it'll run natively.
 
@@ -18,7 +18,7 @@
 
   What it says on the tin.
 
-### MsgpackUnpackStream(options)
+### unpack(buffer)
 
-  Returns a fresh, delicious unpack stream.
+  Returns fresh, delicious unpacked data.
 
