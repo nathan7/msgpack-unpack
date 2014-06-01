@@ -22,3 +22,8 @@
 
   Returns fresh, delicious unpacked data.
 
+## Extras
+
+  The [binary-parse-fn](https://github.com/nathan7/binary-parse-fn) style parser is exposed as `msgpack-unpack/parser`.
+  This is considered public API.
+
