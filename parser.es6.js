@@ -1,6 +1,6 @@
 'use strict';
 module.exports = parse
-var read = require('binary-types').be
+var read = require('binary-types').read.be
 
 function* parse() {
   var first = yield -1
