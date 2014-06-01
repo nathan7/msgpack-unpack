@@ -29,5 +29,8 @@
   "bugs": {
     "url": "https://github.com/nathan7/msgpack-unpack/issues"
   },
-  "homepage": "https://github.com/nathan7/msgpack-unpack"
+  "homepage": "https://github.com/nathan7/msgpack-unpack",
+  "browser": {
+    "./parser.js": "./parser.es5.js"
+  }
 }
