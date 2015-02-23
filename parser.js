@@ -1,8 +1,4 @@
 'use strict';
-try { //jshint evil:true
-  void new Function('return function*(){yield 1}')
-  module.exports = require('./parser.es6')
-}
-catch (e) {
-  module.exports = require('./parser.es5')
-}
+module.exports = require('has-generators')
+  ? require('./parser.es6')
+  : require('./parser.es5')

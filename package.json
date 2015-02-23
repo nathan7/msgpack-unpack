@@ -5,7 +5,8 @@
   "main": "index.js",
   "dependencies": {
     "binary-parse-fn": "^1.0.0",
-    "binary-types": "^2.1.0"
+    "binary-types": "^2.1.0",
+    "has-generators": "^1.0.1"
   },
   "devDependencies": {
     "mocha": "~1.17.1",
